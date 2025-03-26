@@ -3,77 +3,48 @@
 ## Overview
 This bash script automates the process of setting up Git and generating an SSH key for GitHub integration.
 
+## 🛠 Quick Installation
+
+### Download and Run
+```bash
+curl -o setup-git.sh https://raw.githubusercontent.com/sreesreejuks/git-automation/master/setup-git.sh
+chmod +x setup-git.sh
+./setup-git.sh
+```
+
 ## 🌟 Features
 - Installs Git
 - Configures global Git username and email
 - Generates SSH key (if not exists)
 - Displays SSH public key for GitHub setup
 
-## 🛠 Prerequisites
+## 🚨 Prerequisites
 - Ubuntu/Debian-based system
-- `bash` shell
-- `git` (will be installed by script)
-- `ssh-keygen`
-
-## 📦 Installation
-
-### 1. Download the Script
-```bash
-wget https://raw.githubusercontent.com/[YOUR_USERNAME]/[REPO_NAME]/git-setup.sh
-```
-
-### 2. Make Script Executable
-```bash
-chmod +x git-setup.sh
-```
-
-### 3. Run the Script
-```bash
-./git-setup.sh
-```
+- Internet connection
+- `curl` installed
+- Bash shell
 
 ## 💡 What the Script Does
-
-### Git Installation
 - Updates package list
 - Installs Git
-
-### Git Configuration
-- Prompts for username
-- Prompts for email
-- Sets global Git configuration
-
-### SSH Key Generation
-- Creates ED25519 SSH key
-- Skips key generation if key already exists
-- Displays public key for GitHub setup
-
-## 🚨 Important Notes
-- Run script with user account (not root)
-- Have your GitHub email ready
-- Manually add SSH key to GitHub after script execution
+- Configures Git global settings
+- Generates ED25519 SSH key
+- Displays public SSH key for GitHub
 
 ## 📝 Example Workflow
 ```bash
-$ ./git-setup.sh
+$ ./setup-git.sh
 👤 Enter your Git username: YourGitHubUsername
 📧 Enter your Git email: your.email@example.com
 ```
 
-## 🔒 Security
-- Uses ED25519 key type (modern, secure)
-- No passphrase for ease of use
+## 🔒 Security Notes
+- Uses ED25519 SSH key type
 - Generates key in standard `.ssh` directory
+- Requires manual SSH key addition to GitHub
 
-## 🤝 Contributing
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
-
-## 📄 License
-[Choose an appropriate license, e.g., MIT]
+## 🔗 Script Source
+[View on GitHub](https://github.com/sreesreejuks/git-automation/blob/master/setup-git.sh)
 
 ## 💬 Support
-For issues or questions, please open a GitHub issue.
+[Open an Issue](https://github.com/sreesreejuks/git-automation/issues)
